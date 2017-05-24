@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using Com.OneSignal;
 
 namespace XamarinLatinoPushNotifications
 {
@@ -9,6 +10,9 @@ namespace XamarinLatinoPushNotifications
             InitializeComponent();
 
             MainPage = new XamarinLatinoPushNotificationsPage();
+
+            //Setting OneSignal
+            OneSignal.Current.StartInit("{INSERT YOUR ONESIGNAL ID HERE}").EndInit();
         }
 
         protected override void OnStart()
