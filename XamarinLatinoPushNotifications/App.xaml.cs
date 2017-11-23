@@ -12,7 +12,12 @@ namespace XamarinLatinoPushNotifications
             MainPage = new XamarinLatinoPushNotificationsPage();
 
             //Setting OneSignal
-            OneSignal.Current.StartInit("{INSERT YOUR ONESIGNAL ID HERE}").EndInit();
+            OneSignal.Current.StartInit("37064466-c9ad-4b6e-9e3c-6df406f13777").HandleNotificationOpened(OnHandleNotificationOpened).EndInit();
+        }
+
+        private void OnHandleNotificationOpened(Com.OneSignal.Abstractions.OSNotificationOpenedResult result)
+        {
+            
         }
 
         protected override void OnStart()
